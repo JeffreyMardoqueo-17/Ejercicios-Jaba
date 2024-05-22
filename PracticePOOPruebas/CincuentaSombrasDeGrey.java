@@ -31,6 +31,7 @@ public class CincuentaSombrasDeGrey extends Libro {
         this.editorial = editorial;
     }
 
+    //sobreescritura de metodo esto es polimorfismo
     @Override
     public void MostrarInfo(){
         super.MostrarInfo();
