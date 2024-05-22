@@ -1,6 +1,6 @@
 package Ejercicios.PracticePOOPruebas;
 
-public class Libro {
+public class Libro implements ILibro {
     private String titulo;
     private String autor;
     private int paginas;
@@ -20,6 +20,7 @@ public class Libro {
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
     public int getPaginas() {
         return paginas;
     }
@@ -38,7 +39,7 @@ public class Libro {
         this.autor = autor;
         this.paginas = paginas;
     }
-    //metodos del objeto
+
     public void MostrarInfo(){
         System.out.println("Titulo: "+titulo);
         System.out.println("Autor: "+autor);
