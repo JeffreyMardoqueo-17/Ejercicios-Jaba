@@ -4,7 +4,7 @@ import ClasesPadres.Persona;
 public class Profesor extends Persona{
     private String materia;
     private String especialidad;
-    private  int AniosExperiencia;
+    private  int aniosExperiencia;
 
     //constructor sin parametros
     public Profesor() {
@@ -14,7 +14,7 @@ public class Profesor extends Persona{
         super(id, nombre, apellido, edad);
         this.materia = materia;
         this.especialidad = especialidad;
-        AniosExperiencia = aniosExperiencia;
+        this.aniosExperiencia = aniosExperiencia;
     }
     //metodos get y set
 
@@ -35,11 +35,11 @@ public class Profesor extends Persona{
     }
 
     public int getAniosExperiencia() {
-        return AniosExperiencia;
+        return aniosExperiencia;
     }
 
     public void setAniosExperiencia(int aniosExperiencia) {
-        AniosExperiencia = aniosExperiencia;
+        aniosExperiencia = aniosExperiencia;
     }
 
 //metodo que hace solalmente el profesor
@@ -60,7 +60,7 @@ public class Profesor extends Persona{
         super.Presentarse();
         System.out.println("Imparto la maneria de: "+materia);
         System.out.println("Mi especialidad es: "+especialidad);
-        System.out.println("y Tengo "+AniosExperiencia+" años de experiencia");
+        System.out.println("y Tengo "+aniosExperiencia+" años de experiencia");
         System.out.println("---------------------------------------");
     }
 }

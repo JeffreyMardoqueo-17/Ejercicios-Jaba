@@ -1,7 +1,7 @@
 package ClasesHijas;
 
 import ClasesPadres.Persona;
-
+import  Interfaz.IEstarEnLaEscuela;
 public class Estudiante extends Persona {
     private String grado;
     private int Promedio;
@@ -45,6 +45,7 @@ public class Estudiante extends Persona {
     public void HacerExamen(){
         System.out.println("Yo " + getNombre() + "Estoy haciendo examen");
     }
+
     //metdoo de persona y ahora de alumno
     @Override
     public void Presentarse(){
