@@ -1,4 +1,5 @@
 package clases;
+import java.util.Random;
 
 public class Empleado {
     private int id;
@@ -19,7 +20,6 @@ public class Empleado {
         this.apellido = apellido;
         this.departamento = departamento;
         this.salario = salario;
-        this.codigo = generarCodigo(apellido, departamento);
         System.out.println("Código generado: " + this.codigo);
     }
 
@@ -76,8 +76,8 @@ public class Empleado {
         this.salario = salario;
     }
 
-    // Método para generar el código del empleado
-    public String generarCodigo(String apellido, String departamento) {
+    // Mwtodo para generar el codigo del empleado
+    public String generarCodigo() {
         String parteApellido = apellido.length() >= 2 ? apellido.substring(0, 2) : apellido;
         String parteDepartamento = departamento.length() >= 3 ? departamento.substring(0, 3) : departamento;
         int numeroAleatorio = (int) (Math.random() * 900) + 100;
