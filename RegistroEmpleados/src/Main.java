@@ -18,8 +18,8 @@ public class Main {
             System.out.print("ID: ");
             empleado.setId(scanner.nextInt());
 
-            System.out.print("Código: ");
-            empleado.setCodigo(scanner.next());
+            //System.out.print("Código: ");
+            //empleado.setCodigo(scanner.next());
 
             System.out.print("Nombre: ");
             empleado.setNombre(scanner.next());
@@ -30,10 +30,9 @@ public class Main {
             System.out.print("Departamento: ");
             empleado.setDepartamento(scanner.next());
 
-            System.out.print("Salario: ");
-            empleado.setSalario(scanner.nextDouble());
-
+            Empleado empleado  = new empleado (id, codigo, nombre, apellido, departamento, salario);
             empleados.add(empleado);
+            
 
             System.out.print("¿Desea continuar registrando empleados? (s/n): ");
             continuar = scanner.next();

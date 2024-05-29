@@ -12,13 +12,15 @@ public class Empleado {
     public Empleado() {
     }
     //constructor
-    public Empleado(int id, String codigo, String nombre, String apellido, String departamento, double salario) {
+    private Empleado(int id, String codigo, String nombre, String apellido, String departamento, double salario) {
         this.id = id;
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.departamento = departamento;
         this.salario = salario;
+        this.codigo = generarCodigo(apellido, departamento);
+        System.out.println("Código generado: " + this.codigo);
     }
 
     //getters y setters
@@ -75,7 +77,7 @@ public class Empleado {
     }
 
     // Método para generar el código del empleado
-    private String generarCodigo(String apellido, String departamento) {
+    public String generarCodigo(String apellido, String departamento) {
         String parteApellido = apellido.length() >= 2 ? apellido.substring(0, 2) : apellido;
         String parteDepartamento = departamento.length() >= 3 ? departamento.substring(0, 3) : departamento;
         int numeroAleatorio = (int) (Math.random() * 900) + 100;
