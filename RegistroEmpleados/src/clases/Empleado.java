@@ -60,14 +60,17 @@ public class Empleado {
     }
 
     public void setDepartamento(String departamento) {
+
         this.departamento = departamento;
     }
 
     public double getSalario() {
+
         return salario;
     }
 
     public void setSalario(double salario) {
+
         this.salario = salario;
     }
 }
