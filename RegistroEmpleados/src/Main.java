@@ -41,8 +41,13 @@ public class Main {
 
         System.out.println("EMPLEADOS REGISTRADOS");
         for (Empleado emp : empleados) {
-            System.out.println("ID: " + emp.getId() + ", Código: " + emp.getCodigo() + ", Nombre: " + emp.getNombre() + ", Apellido: " + emp.getApellido() + ", Departamento: " + emp.getDepartamento() + ", Salario: " + "$" +emp.getSalario());
-            System.out.println("------------------------------------------------");
+            System.out.println("ID: " + emp.getId());
+            System.out.println("Código: " + emp.getCodigo());
+            System.out.println("Nombre: " + emp.getNombre());
+            System.out.println("Apellido: " + emp.getApellido());
+            System.out.println("Departamento: " + emp.getDepartamento());
+            System.out.println("Salario: " + emp.getSalario());
+            System.out.println("-----------------------------------------------------------------");
         }
 
         scanner.close();
