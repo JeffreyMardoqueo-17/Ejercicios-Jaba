@@ -70,4 +70,13 @@ public class Empleado {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+
+    private String generarCodigo(String apellido, String departamento) {
+        String parteApellido = apellido.length() >= 2 ? apellido.substring(0, 2) : apellido;
+        String parteDepartamento = departamento.length() >= 3 ? departamento.substring(0, 3) : departamento;
+        int numeroAleatorio = (int) (Math.random() * 900) + 100;
+        return parteApellido + parteDepartamento + numeroAleatorio;
+    }
+
 }
