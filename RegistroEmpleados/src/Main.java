@@ -18,6 +18,9 @@ public class Main {
             System.out.print("ID: ");
             empleado.setId(scanner.nextInt());
 
+            System.out.print("Código: ");
+            empleado.setCodigo(scanner.next());
+
             System.out.print("Nombre: ");
             empleado.setNombre(scanner.next());
 
@@ -37,6 +40,12 @@ public class Main {
 
         } while (continuar.equalsIgnoreCase("s"));
 
+        System.out.println("EMPLEADOS REGISTRADOS");
+        for (Empleado emp : empleados) {
+            System.out.println("ID: " + emp.getId() + ", Código: " + emp.getCodigo() + ", Nombre: " + emp.getNombre() + ", Apellido: " + emp.getApellido() + ", Departamento: " + emp.getDepartamento() + ", Salario: " + emp.getSalario());
+        }
+
+        scanner.close();
 
     }
 }
