@@ -71,7 +71,7 @@ public class Empleado {
         this.salario = salario;
     }
 
-
+    // Método para generar el código del empleado
     private String generarCodigo(String apellido, String departamento) {
         String parteApellido = apellido.length() >= 2 ? apellido.substring(0, 2) : apellido;
         String parteDepartamento = departamento.length() >= 3 ? departamento.substring(0, 3) : departamento;
