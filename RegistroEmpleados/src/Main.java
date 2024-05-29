@@ -1,13 +1,11 @@
 import clases.Empleado;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         LinkedList<Empleado> empleados = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
         String continuar;
 
         do {
@@ -18,9 +16,6 @@ public class Main {
             System.out.print("ID: ");
             empleado.setId(scanner.nextInt());
 
-            System.out.print("Código: ");
-            empleado.setCodigo(scanner.next());
-
             System.out.print("Nombre: ");
             empleado.setNombre(scanner.next());
 
@@ -29,6 +24,10 @@ public class Main {
 
             System.out.print("Departamento: ");
             empleado.setDepartamento(scanner.next());
+
+            // Generar el cidigo del empleado
+            String codigo = empleado.generarCodigo();
+            empleado.setCodigo(codigo);
 
             System.out.print("Salario: ");
             empleado.setSalario(scanner.nextDouble());
@@ -42,10 +41,10 @@ public class Main {
 
         System.out.println("EMPLEADOS REGISTRADOS");
         for (Empleado emp : empleados) {
-            System.out.println("ID: " + emp.getId() + ", Código: " + emp.getCodigo() + ", Nombre: " + emp.getNombre() + ", Apellido: " + emp.getApellido() + ", Departamento: " + emp.getDepartamento() + ", Salario: " + emp.getSalario());
+            System.out.println("ID: " + emp.getId() + ", Código: " + emp.getCodigo() + ", Nombre: " + emp.getNombre() + ", Apellido: " + emp.getApellido() + ", Departamento: " + emp.getDepartamento() + ", Salario: " + "$" +emp.getSalario());
+            System.out.println("------------------------------------------------");
         }
 
         scanner.close();
-
     }
 }
